@@ -1,0 +1,58 @@
+.btn-container {
+    text-align: center;
+  }
+  
+  button {
+    width: 80%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+  
+    /* ボタンにカーソルを当てると、カーソルがポインターに変わる */
+    cursor: pointer;
+  }
+  
+  /* ボタンにカーソルを当てたとき、ボタンを半透明にする */
+  button:hover {
+   opacity: 0.7;
+  }
+  
+  /* ポップアップメッセージを隠す */
+  .hidden {
+    display: none;
+  }
+  
+  /* ポップアップメッセージを画面右下に配置 */
+  #btn4-text {
+    height: 72px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #ddd;
+    font-weight: bold;
+    text-align: center;
+    line-height: 72px;
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+  }
+  
+  /* ポップアップアニメーションを3秒かけて実行 */
+  .popup-message {
+    animation: popup 3s forwards;
+  }
+  
+  @keyframes popup {
+    0% {
+      transform: translateY(15%);
+      opacity: 0;
+    }
+    10%, 90% {
+      transform: none;
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(15%);
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
